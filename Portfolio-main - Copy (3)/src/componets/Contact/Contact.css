@@ -1,0 +1,165 @@
+/* 1. Global Reset for Form Elements */
+.contact-right input, 
+.contact-right textarea, 
+.contact-submit {
+    box-sizing: border-box; /* Prevents padding from increasing width */
+    font-family: 'Outfit', sans-serif;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 80px 5%; /* Use percentage for better mobile spacing */
+}
+
+/* 2. Header Section */
+.contact-title {
+    position: relative;
+    text-align: center;
+}
+
+.contact-title h1 {
+    padding: 0 30px;
+    font-size: clamp(40px, 8vw, 80px); /* Fluid typography: scales with screen size */
+    font-weight: 600;
+    margin: 0;
+}
+
+.contact-title img {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    z-index: -1;
+    max-width: 150px; /* Ensure decorative image doesn't overwhelm */
+}
+
+/* 3. Main Layout Section */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    justify-content: center;
+    gap: 60px 150px; /* Vertical gap for wrap, horizontal for desktop */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* 4. Left Content */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    min-width: 300px; /* Prevents getting too squished */
+}
+
+.contact-left h1 {
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 700;
+    background: linear-gradient(270deg, #DF8908 80%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.contact-left p {
+    max-width: 550px;
+    color: #D8D8D8;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #D8D8D8;
+    font-size: 1.1rem;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.2s;
+}
+
+.contact-detail:hover {
+    transform: translateX(10px); /* Subtle interactive feel */
+}
+
+/* 5. Right Side (Form) */
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+    width: 100%;
+}
+
+.contact-right label {
+    color: #D8D8D8;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: -10px; /* Pull label closer to input */
+}
+
+.contact-right input, 
+.contact-right textarea {
+    border: 2px solid transparent; /* Prepare for focus border */
+    width: 100%; /* Responsive width */
+    max-width: 700px;
+    background: #32323c;
+    color: #FFFFFF; /* Brighter text for better contrast */
+    border-radius: 6px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.contact-right input {
+    height: 65px;
+    padding: 0 20px;
+}
+
+.contact-right textarea {
+    padding: 20px;
+    min-height: 200px;
+    resize: vertical; /* Allow users to resize height only */
+}
+
+/* Hover & Focus Effects */
+.contact-right input:focus, 
+.contact-right textarea:focus {
+    outline: none;
+    border-color: #DF8908;
+    background: #3b3b45;
+}
+
+/* 6. Submit Button */
+.contact-submit {
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 18px 50px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-submit:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(180, 21, 255, 0.3);
+}
+
+.contact-submit:active {
+    transform: translateY(0) scale(0.98);
+}

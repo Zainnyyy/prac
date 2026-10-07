@@ -1,0 +1,53 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10%;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.nav-menu li img {
+    width: 30px;
+    display: flex;
+    margin: auto;
+}
+
+.nav-connect {
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DF8908 0.36%, #B415FF 102.06%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+}
+.nav-logo {
+    font-size: 40px;
+    font-weight: 700;
+    cursor: pointer;
+    /* If you want a gradient effect similar to many modern portfolios: */
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
